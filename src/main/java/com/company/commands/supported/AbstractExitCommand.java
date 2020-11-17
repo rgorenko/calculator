@@ -9,6 +9,6 @@ public abstract class AbstractExitCommand  implements Command {
     @Override
     public void action() {
         System.out.println(GOODBYE);
-        //Runtime.getRuntime().halt(TERMINATION_STATUS_CODE);
+        Runtime.getRuntime().halt(TERMINATION_STATUS_CODE);
     }
 }
