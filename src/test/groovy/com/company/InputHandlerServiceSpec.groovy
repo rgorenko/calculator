@@ -20,6 +20,7 @@ class InputHandlerServiceSpec extends BaseSpec {
         then:
             1 * commandHandlerService.handle(numberInput)
             1 * calculationService.input(numberInput)
+            0 * _
     }
 
     def "should handle incorrect input"() {
@@ -28,5 +29,6 @@ class InputHandlerServiceSpec extends BaseSpec {
         then:
             1 * commandHandlerService.handle(unsupportedOperator)
             1 * calculationService.input(unsupportedOperator) >> {throw new NumberFormatException()}
+            0 * _
     }
 }
