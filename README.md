@@ -14,7 +14,7 @@ It can be started on Windows, Linux and Mac.
 ##### Sources
 - download sources by cloning git repository<br>
 ```bash
-git clone https://github.com//rgorenko/calculator.git
+git clone https://github.com/rgorenko/calculator.git
 ```
 
 ##### How to compile ?
@@ -43,7 +43,40 @@ You can press 'q' to quit.
 ##### Examples of usage
 ```bash
 cd ./target
-java -jar calculator-1.0-SNAPSHOT.jar
+$ java -jar calculator-1.0-SNAPSHOT.jar
+----------------------------------------------
+Greeting in Reverse Polish notation calculator!
+Please input first number, press Enter, input second number and press Enter.
+After that please input one supported operation: +, -, * or /
+and press Enter to receive result.
+You can press 'q' to quit.
+1
+> 1
+1.0
+2
+> 2
+2.0
++
+> +
+3.0
+-
+> -
+-1.0
+*
+> *
+-3.0
+5
+> 5
+5.0
+10
+> 10
+10.0
+/
+> /
+0.5
+q
+> q
+Goodbye!
 
 ```
 ##### How to add new operation ?
@@ -63,10 +96,12 @@ Implement AbstractInputSource and register implementation in InputSources class
 Main idea of design - to have ability add new Input sources, Commands and Operator.
 New operators can be added in OperatorProvider. They will be registered in OperatorsRegistry after that.
 During user's input of operation application checks that our system has support of this operation.
-It provides safety - application's flow do not handle row user's input but handle strict types of operators that supported by system. 
+It provides safety - application's flow do not handle raw user's input but handle strict types of operators that supported by system. 
 Similar approach used for CommandsProvider and CommandsRegistry.
-It supports new Input sources by implementation of AbstractInputSource. Application flow relies on InputSource abstraction but not concrete source.
-Memory for operands intentionally limited by two numbers. Customization of ArrayDeque with max size used for OperandsMemory.
+It supports new Input sources by implementation of AbstractInputSource. 
+Application flow relies on InputSource abstraction but not concrete source.
+Memory for operands intentionally limited by two numbers. 
+Customization of ArrayDeque with max size used for OperandsMemory.
 CalculationService is responsible for apply of operation to operands.
 
 ##### Ideas for future
