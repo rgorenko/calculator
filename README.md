@@ -50,33 +50,27 @@ Please input first number, press Enter, input second number and press Enter.
 After that please input one supported operation: +, -, * or /
 and press Enter to receive result.
 You can press 'q' to quit.
-1
 > 1
 1.0
-2
 > 2
 2.0
-+
 > +
 3.0
--
 > -
 -1.0
-*
 > *
 -3.0
-5
 > 5
 5.0
-10
 > 10
 10.0
-/
 > /
 0.5
-q
+> 5
+5.0
 > q
 Goodbye!
+
 
 ```
 ##### How to add new operation ?
