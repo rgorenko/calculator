@@ -1,0 +1,6 @@
+----------------------------------------------
+Greeting in Reverse Polish notation calculator!
+Please input first number, press Enter, input second number and press Enter.
+After that please input one supported operation: +, -, * or /
+and press Enter to receive result.
+You can press 'q' to quit.
