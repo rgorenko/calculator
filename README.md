@@ -93,7 +93,7 @@ Goodbye!
 Implement AbstractInputSource and register implementation in InputSources class
 
 ##### Architecture design description
-Main idea of design - to have ability add new Input sources, Commands and Operator seamlessly.
+Main idea of design - to have ability add new Input sources, Commands and Operators seamlessly.
 New operators can be added in OperatorProvider. They will be registered in OperatorsRegistry after that.
 During user's input of operation application checks that our system has support of this operation.
 It provides safety - application's flow do not handle raw user's input but handle strict types of operators that supported by system. 
