@@ -47,14 +47,14 @@ java -jar calculator-1.0-SNAPSHOT.jar
 
 ```
 ##### How to add new operation ?
-1 Implement interface Operator
-2 Register new Operator in OperatorsProvider
-3 Add functional test to folder src/test/groovy/com/company/functional
+- 1 Implement interface Operator
+- 2 Register new Operator in OperatorsProvider
+- 3 Add functional test to folder src/test/groovy/com/company/functional
 
 ##### How to add new command ?
-1 Implement interface Command or extend AbstractExitCommand if this command to quit application 
-2 Register new Command in CommandsProvider
-3 Add functional test to folder src/test/groovy/com/company/commands
+- 1 Implement interface Command or extend AbstractExitCommand if this command to quit application 
+- 2 Register new Command in CommandsProvider
+- 3 Add functional test to folder src/test/groovy/com/company/commands
 
 ##### How to add new input source ?
 Implement AbstractInputSource and register implementation in InputSources class
@@ -70,11 +70,11 @@ Memory for operands intentionally limited by two numbers. Customization of Array
 CalculationService is responsible for apply of operation to operands.
 
 ##### Ideas for future
-1 Improve function testing. Create black box container for application,  send commands to container and check result.
-2 More unit tests
-3 Improve Exception handling
-4 Remove message after start for java >= 9
-5 Use BigDecimal instead of Double
-6 Better support of graceful shutdown
+- 1 Improve function testing. Create black box container for application,  send commands to container and check result <br>
+- 2 More unit tests <br>
+- 3 Improve Exception handling <br>
+- 4 Remove message after start for java >= 9 <br>
+- 5 Use BigDecimal instead of Double <br>
+- 6 Better support of graceful shutdown <br>
 
 
