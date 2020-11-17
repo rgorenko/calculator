@@ -99,7 +99,7 @@ Customization of ArrayDeque with max size used for OperandsMemory.
 CalculationService is responsible for apply of operation to operands.
 
 ##### Ideas for future
-- Improve function testing. Create black box container for application,  send commands to container and check result <br>
+- Improve functional testing. Create black box container for application,  send commands to container and check result <br>
 - More unit tests <br>
 - Improve Exception handling <br>
 - Use BigDecimal instead of Double <br>
