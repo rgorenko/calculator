@@ -3,9 +3,9 @@
 ### Reverse Polish notation calculator
 
 It's simple console calculator that support for basic arithmetic operations: +,-,*,/ for two last operands
-You should press input operand or operator and press Enter
+You should press input operand or operator and press Enter.
 See examples of usage below or check functional tests in folder /src/test/groovy/com/company/functional
-It can be started on Windows, Linux and Mac
+It can be started on Windows, Linux and Mac.
 
 ##### Requirements
 - Java >= 1.8
@@ -64,7 +64,7 @@ Main idea of design - to have ability add new Input sources, Commands and Operat
 New operators can be added in OperatorProvider. Their will be registered in OperatorsRegistry after that.
 During user's input of new operation application checks that our system has support of this operation.
 It provides safety - application's flow do not handle row user's input but handle strict types of operators that supported by system. 
-Similar approach used for CommandsProvider and CommandsRegistry 
+Similar approach used for CommandsProvider and CommandsRegistry.
 Memory for operands intentionally limited by two numbers.
 
 ##### Ideas for future
