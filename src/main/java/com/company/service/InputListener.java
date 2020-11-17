@@ -14,17 +14,13 @@ public class InputListener {
     @PostConstruct
     public void listen() {
         do {
+            System.out.print("> ");
             String input = inputSource.readLine();
-            echoInput(input);
             try {
                 inputHandlerService.handle(input);
             } catch (NullPointerException exception) {
                 isListening = false;
             }
         } while (isListening);
-    }
-
-    private void echoInput(String input) {
-        System.out.println("> " + input);
     }
 }
