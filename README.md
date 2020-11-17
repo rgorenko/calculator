@@ -61,11 +61,13 @@ Implement AbstractInputSource and register implementation in InputSources class
 
 ##### Architecture design description
 Main idea of design - to have ability add new Input sources, Commands and Operator.
-New operators can be added in OperatorProvider. Their will be registered in OperatorsRegistry after that.
-During user's input of new operation application checks that our system has support of this operation.
+New operators can be added in OperatorProvider. They will be registered in OperatorsRegistry after that.
+During user's input of operation application checks that our system has support of this operation.
 It provides safety - application's flow do not handle row user's input but handle strict types of operators that supported by system. 
 Similar approach used for CommandsProvider and CommandsRegistry.
-Memory for operands intentionally limited by two numbers.
+It supports new Input sources by implementation of AbstractInputSource. Application flow relies on InputSource abstraction but not concrete source.
+Memory for operands intentionally limited by two numbers. Customization of ArrayDeque with max size used for OperandsMemory.
+CalculationService is responsible for apply of operation to operands.
 
 ##### Ideas for future
 1 Improve function testing. Create black box container for application,  send commands to container and check result.
